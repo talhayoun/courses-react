@@ -1,0 +1,113 @@
+.profile{
+    height: calc(100vh - 4rem);
+    background: aliceblue;
+    overflow: hidden;
+}
+
+.profile-container{
+    height: 80%;
+    width: 40%;
+    margin: 0 auto;
+    border: 2px solid black;
+    margin-top: 100px;
+    background: white;
+
+    form{
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        h3{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        p{
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+
+        input{
+            height: 40px;
+            font-size: 20px;
+            background: beige;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.profile-container-div{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    border-left: 2px solid cadetblue;
+    padding: 20px;
+}
+.profile-container-div-button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-top: 2px solid cadetblue;
+    background: darkslateblue;
+    
+    button{
+        padding: 5px;
+        border: 3px solid black;
+        background: cadetblue;
+        color: white;
+        font-size: 25px;
+    }
+}
+
+.profile-div-button-button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.profile-container-div-inputOne{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.profile-container-div-inputTwo{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.profile-container-div-button-update{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.profile-container-img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    .profile-img{
+        background: yellow;
+        height: 70%;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 8%;
+        border-radius: 50%;
+        background-image: url("../../images/young-happy-attractive-asian-student-smiling-camera_1439-173.jpg");
+        background-size: cover;
+    }
+}

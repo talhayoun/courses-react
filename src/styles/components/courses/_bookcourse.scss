@@ -1,0 +1,80 @@
+.bookcourse{
+
+    .bookcourse-container{
+
+        margin-top: 100px;
+
+    
+        table,td, th{
+            border: 2px solid black;
+        }
+        table{
+            width: 80%;
+            margin: 0 auto;
+
+            th{
+                font-size: 30px;
+                background: darkcyan;
+                color: rgb(240, 234, 234);
+                padding: 5px;
+                font-weight: 700;
+            }
+            td{
+                font-size: 25px;
+                background: floralwhite;
+                padding: 5px;
+            }    
+        }
+    }
+}
+
+.error-message-bookcourse{
+    background:#cacac8;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    top: 400px;;
+    right: 700px;
+    outline: 2px solid black;
+    z-index: 10;
+    
+    p{
+        color: red;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 100px;
+        font-weight: 700;
+        font-family: sans-serif;
+    }
+}
+
+.bookcourse-created-box{
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // z-index: -1
+    opacity: 0.8;
+}
+
+.book-course-message{
+    background:#cacac8;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    top: 400px;;
+    right: 700px;
+    outline: 2px solid black;
+    z-index: 10;
+    
+    p{
+        color: green;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 100px;
+        font-weight: 700;
+        font-family: sans-serif;
+    }
+}

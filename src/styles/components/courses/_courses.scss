@@ -1,0 +1,74 @@
+.courses{
+    height: calc(100vh - 4rem);
+
+
+
+    table,td, th{
+        border: 2px solid black;
+    }
+    table{
+        width: 80%;
+        margin: 0 auto;
+
+        th{
+            font-size: 30px;
+            background: darkcyan;
+            color: rgb(240, 234, 234);
+            padding: 5px;
+            font-weight: 700;
+        }
+        td{
+            font-size: 25px;
+            background: floralwhite;
+            padding: 5px;
+        }    
+    }
+}
+
+.table-container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.student-created-box{
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // z-index: -1
+    opacity: 0.8;
+}
+
+.student-course-message{
+    background:black;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    top: 400px;;
+    right: 700px;
+    outline: 2px solid white;
+    z-index: 10;
+    
+    p{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 100px;
+        font-weight: 700;
+        font-family: sans-serif;
+    }
+    input{
+        height: 20%;
+        width: 50%;
+        margin-top: 15%;
+        margin-left: 50px;
+    }
+    button{
+        height: 20%;
+        background: wheat;
+    }
+}

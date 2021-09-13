@@ -1,0 +1,46 @@
+.home-professor{
+    height: calc(100vh - 5rem);
+}
+
+.home-professor-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns:15% 85%
+
+}
+
+.home-professor-nav{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background: darkblue;
+    height: 100%;        
+    color: white;
+    font-family: sans-serif;
+    padding: 20px;
+
+    .professor-profile{
+        background: yellow;
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    li{
+        margin-top: 40px;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover{
+            background: black;
+            width: fit-content;
+        }
+    }
+}
+
+.home-professor-body{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}

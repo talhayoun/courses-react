@@ -1,0 +1,111 @@
+.professor-course{
+    // height: calc(100vh - 5rem);
+    // height:100%;
+
+    .professor-course-container{
+
+        overflow: hidden;
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+        margin-top: 100px;
+
+        table,td, th{
+            border: 2px solid black;
+        }
+        table{
+            width: 80%;
+            margin: 0 auto;
+
+            th{
+                font-size: 30px;
+                background: darkcyan;
+                color: rgb(240, 234, 234);
+                padding: 5px;
+                font-weight: 700;
+            }
+            td{
+                font-size: 25px;
+                background: floralwhite;
+                padding: 5px;
+            }    
+        }
+    }
+}
+
+.professor-course-participants{
+    background:#cacac8;
+    width: 30%;
+    height: 800px;
+    position: absolute;
+    top: 100px;
+    right: 550px;
+    outline: 2px solid black;
+    z-index: 10;
+
+    ol li{
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+}
+.professor-blackbox{
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.professor-participants-list{
+    color: black;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.professor-course-participants-closebutton{
+    float: right;
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.add-student-button-courses{
+    margin-left: 10px;
+    cursor: pointer;
+    background: #b2b2ff;
+    color: black;
+    padding: 5px;
+    font-weight: 700;
+    font-family: sans-serif;
+    width: 80px;
+
+    &:hover{
+        background: darkgoldenrod;
+    }
+}
+
+.professor-course-msg, .professor-course-msg-error{
+    height: 200px;
+    width: 500px;
+    background: black;
+    margin: 0 auto;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+    margin-left: 20%;
+    position: absolute;
+}
+
+.professor-course-msg-error{
+    color: red;
+}

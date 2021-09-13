@@ -1,0 +1,98 @@
+.professor-new-course{
+
+    height: 80%;
+    .professor-new-course-container{
+        height: 80%;
+        width: 50%;
+        margin: 0 auto;
+        background: white;
+        margin-top: 100px;
+
+        form{
+            text-align: center;
+            font-family: sans-serif;
+            padding: 20px;
+            outline: 2px solid black;
+            display: grid;
+            grid-template-columns: 2fr 4fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            height: 100%;
+
+            h1{
+                font-size: 40px;
+                margin-top: 20px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            label{
+                // float: left;
+                // display: block;
+                // width: 30%;
+                // margin-top: 40px;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                font-size: 25px;
+                font-weight: 700;
+                text-align: left;
+            }
+
+            input{
+                // display: block;
+                width: 80%;
+                height: 40px;
+                // margin-top:40px;
+                background: rgb(247, 247, 247);
+                border: 1px solid blue;
+                border-radius: 10px;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                
+            }
+
+
+            button{
+                font-size: 30px;
+                font-weight: 700;
+                background: rgb(150, 44, 150);
+                color: white;
+                border: 1px solid black;
+                // margin-top: 80px;
+                height: 50px;
+                padding: 10px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .button-time{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 4;
+            }
+        }
+    }
+}
+
+.professor-created-box{
+    width: 500px;
+    height: 350px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 30%;
+    background: black;
+    padding: 50px;
+    color: white;
+    font-size: 25px;
+    
+    p{
+        text-align: left;
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+.time-style{
+    display: block;
+    margin: 2px;
+}

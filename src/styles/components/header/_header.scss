@@ -1,0 +1,23 @@
+.header{
+    height: 5rem;
+    background: #4a4646;
+}
+.header-nav{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-nav > * {
+    font-size: 25px;
+    color: white;
+    text-decoration: unset;
+}
+.header-nav button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
