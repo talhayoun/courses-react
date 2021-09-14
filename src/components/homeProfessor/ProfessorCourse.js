@@ -18,9 +18,9 @@ const ProfessorCourse = () => {
     const [currentCourse, setCurrentCourse] = useState("");
     const [message, setMessage] = useState("");
     const [messageStyle, setMessageStyle] = useState()
-    const [select, setSelect] = useState("");
+    const [selectedTime, setSelectedTime] = useState("");
     const [courseID, setCourseID] = useState("");
-    const [studentReason, setStudentReason] = useState("");
+    const [isStudentReason, setIsStudentReason] = useState(false);
 
     useEffect(() => {
 
@@ -59,7 +59,7 @@ const ProfessorCourse = () => {
     }
 
     const onClickShowParticipants = (participants, courseID) => {
-        console.log(participants)
+        console.log(participants, "participants")
         setParticipants([...participants]);
         setCourseID(courseID)
         setShowParticipants(true);
@@ -76,27 +76,36 @@ const ProfessorCourse = () => {
         setMessage(msg);
         setBlackBox(true)
 
-        setTimeout(() => {
-            setMessage("")
-            setBlackBox(false)
-        }, 2000);
+        // setTimeout(() => {
+        //     setMessage("")
+        //     setBlackBox(false)
+        // }, 2000);
+    }
+
+    const hideMessage = () => {
+        setMessage("");
+        setIsStudentReason(false);
     }
 
     const addStudentToClass = () => {
         console.log(studentEmail, currentCourse)
-        console.log(select, "@@")
-        joinCourse(currentCourse, studentEmail, select).then(
+        console.log(selectedTime, "@@")
+        joinCourse(currentCourse, studentEmail, selectedTime).then(
             (res) => {
                 setMessageStyle("professor-course-msg")
                 showMessage("Added to course!");
                 setTimeout(() => {
                     window.location.reload()
+                    hideMessage()
                 }, 2000);
 
             },
             (err) => {
                 setMessageStyle("professor-course-msg-error")
                 showMessage("Already in course");
+                setTimeout(() => {
+                    hideMessage()
+                }, 2000);
             }
         )
     }
@@ -104,25 +113,24 @@ const ProfessorCourse = () => {
     const getStudentReason = (student, courseID) => {
         let result;
         let studentData;
-        console.log(student, "student")
-        for(let i = 0; i< studentsList.length; i++){
-            if(studentsList[i]._id === student.id){
+        for (let i = 0; i < studentsList.length; i++) {
+            if (studentsList[i]._id === student.id) {
                 studentData = studentsList[i];
             }
         }
-        console.log(studentData, "Studentdata")
 
-        for(let i = 0; i< studentData.courses.length; i++){
-            if(studentData.courses[i].courseID === courseID){
+
+        for (let i = 0; i < studentData.courses.length; i++) {
+            if (studentData.courses[i].courseID === courseID) {
                 result = studentData.courses[i];
             }
         }
-        console.log(result, "Result")
-        setStudentReason(result.coursereason);
-        removeBlackBox();
-        alert(result.coursereason ? result.coursereason : "Attended")
-        // return result.coursereason;
+        setMessageStyle("professor-student-reason")
+        setMessage(result.coursereason ? result.coursereason : "Attended");
+        setBlackBox(true)
+        setIsStudentReason(true);
     }
+
 
     return (
         <div className="professor-course">
@@ -143,9 +151,9 @@ const ProfessorCourse = () => {
                             <tr key={course._id}>
                                 <td>{course.name}</td>
                                 <td>
-                                    <select onChange={(e) => setSelect(e.target.value)}>
+                                    <select onChange={(e) => setSelectedTime(e.target.value)}>
                                         <option>----</option>
-                                        {course.times.map((currentTime) => <option key={currentTime._id}>{currentTime.time}</option> )}
+                                        {course.times.map((currentTime) => <option key={currentTime._id}>{currentTime.time}</option>)}
                                     </select>
                                 </td>
                                 <td>{course.day}</td>
@@ -179,7 +187,17 @@ const ProfessorCourse = () => {
 
                 </div>}
                 {blackBox && <div className="professor-blackbox" onClick={() => removeBlackBox()}></div>}
-                {message && <div className={messageStyle}>{message}</div>}
+                {message &&
+                    <div className={messageStyle}>
+                        {isStudentReason &&
+                            <div>
+                                <h1>Student reason</h1>
+                                <div onClick={hideMessage} className="student-reason-exit">X</div>
+                            </div>
+                        }
+                        {message}
+                    </div>
+                }
             </div>
         </div>
     );

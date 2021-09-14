@@ -10,26 +10,26 @@
         margin: 0 auto;
         margin-top: 100px;
 
-        table,td, th{
-            border: 2px solid black;
-        }
-        table{
-            width: 80%;
-            margin: 0 auto;
-
-            th{
-                font-size: 30px;
-                background: darkcyan;
-                color: rgb(240, 234, 234);
-                padding: 5px;
-                font-weight: 700;
-            }
-            td{
-                font-size: 25px;
-                background: floralwhite;
-                padding: 5px;
-            }    
-        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+          td{
+            background: white;
+            width: 10%;
+            height: 10%;
+            
+          }
+          th{
+              background: #ccc;
+          }
     }
 }
 
@@ -108,4 +108,34 @@
 
 .professor-course-msg-error{
     color: red;
+}
+
+.professor-student-reason{
+    height: 200px;
+    width: 500px;
+    background: black;
+    margin: 0 auto;
+    padding: 50px;
+    font-size: 20px;
+    // font-weight: 700;
+    font-family: sans-serif;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    color: white;
+    z-index: 10;
+    margin-left: 20%;
+    position: absolute;
+
+    h1{
+        font-size: 25px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+}
+
+.student-reason-exit{
+    position: absolute;
+    top: 5px;
+    right: 10px;
 }
